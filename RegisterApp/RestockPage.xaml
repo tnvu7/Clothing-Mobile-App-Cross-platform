@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="RegisterApp.RestockPage">
+    <ContentPage.Content>
+        <RelativeLayout>
+        <StackLayout Spacing="30" Padding="30"
+            RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent, Property=Height, Factor=0.25}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent, Property=Width, Factor=1}">
+
+            <Entry x:Name="newQty" Placeholder="Enter new quantity"
+                   WidthRequest="300" HorizontalOptions="Center"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Restock" Clicked="Restock_Item"/>
+                <Button Text="Cancel" Clicked="Cancel"/>
+            </StackLayout>
+        </StackLayout>
+            <ListView x:Name="restockList" ItemSelected="myList_ItemSelected"
+                      RelativeLayout.YConstraint="{ConstraintExpression
+        Type=RelativeToParent, Property= Height, Factor=0.25}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                     <Label Text="{Binding productName}"></Label>
+                                </StackLayout>
+                                <Label Text="{Binding productQuantity}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+            </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

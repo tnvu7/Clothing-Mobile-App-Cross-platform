@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="RegisterApp.ManagerPanel">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Button Text="History" TextColor="white" BackgroundColor="#98DCEA"
+                    FontSize="20" Padding="10" Clicked="History_Page"/>
+            <Button Text="Restock" TextColor="white" BackgroundColor="#98DCEA"
+                    FontSize="20" Padding="10" Clicked="Restock_Page"/>
+            <Button Text="Add New Product" TextColor="white" BackgroundColor="#98DCEA"
+                    FontSize="20" Padding="10" Clicked="NewProduct_Page"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="RegisterApp.AddNewProductPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="SaveItem"/>
+        <ToolbarItem Text="Cancel" Clicked="Cancel"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="15">
+            <StackLayout Orientation="Vertical">
+                <Label Text="Product Name" FontSize="14"/>
+                <Entry x:Name="EntryName" Placeholder="Enter Product Name"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" >
+                <Label Text="Product Price" FontSize="14"/>
+                <Entry x:Name="EntryPrice" Placeholder="Enter Product Price"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Product Quantity" FontSize="14"/>
+                <Entry x:Name="EntryQuantity" Placeholder="Enter Product Quantity"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

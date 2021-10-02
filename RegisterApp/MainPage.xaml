@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RegisterApp"
+             x:Class="RegisterApp.MainPage"
+             Title="Cash Register App">
+    
+    <Grid RowSpacing="0"
+          ColumnSpacing="0" BackgroundColor="#E9E9E9" Padding="40">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="310"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" x:Name="typeLabel" FontSize="Large" ></Label>
+            <Button Grid.Row="0" Grid.Column="1" Text="Manager" FontSize="Large" BackgroundColor="IndianRed"
+                    TextColor="white" CornerRadius="10" Clicked="ManagerBtn_Clicked"></Button>
+       <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Padding="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                </Grid.RowDefinitions>
+               
+             <local:myButton Text="1" Grid.Column="0" Grid.Row="1" Clicked="Btn_clicked"/>   
+             <local:myButton Text="2" Grid.Column="1" Grid.Row="1" Clicked="Btn_clicked"/>
+             <local:myButton Text="3" Grid.Column="2" Grid.Row="1" Clicked="Btn_clicked"/>
+            
+            
+            <Label x:Name="totalLabel" Grid.Column="3" Grid.Row="1" FontSize="Large"/>
+
+             <local:myButton Text="4" Grid.Column="0" Grid.Row="2" Clicked="Btn_clicked"/>   
+             <local:myButton Text="5" Grid.Column="1" Grid.Row="2" Clicked="Btn_clicked"/>
+             <local:myButton Text="6" Grid.Column="2" Grid.Row="2" Clicked="Btn_clicked"/>
+
+           
+            <Button Text="Buy" Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" Clicked="BuyBtn_Clicked"
+                    TextColor="White" FontSize="Large" BackgroundColor="#98DCEA" CornerRadius="20"/>
+
+            <local:myButton Text="7" Grid.Column="0" Grid.Row="3" Clicked="Btn_clicked"/>   
+             <local:myButton Text="8" Grid.Column="1" Grid.Row="3" Clicked="Btn_clicked"/>
+             <local:myButton Text="9" Grid.Column="2" Grid.Row="3" Clicked="Btn_clicked"/>
+
+           <local:myButton Text="0" Grid.Column="1" Grid.Row="4" Clicked="Btn_clicked"/>
+            
+            </Grid>
+            
+            <Label Grid.Row="2" x:Name="qtyLabel" FontSize="Large" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <ListView RowHeight="60" Grid.Row="3" x:Name="myList" ItemSelected="myList_ItemSelected" Grid.Column="0" Grid.ColumnSpan="2">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding productName}"></Label>
+                                        <Label Text="{Binding productPrice}" TextColor="Red" FontSize="Small"></Label>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Label Text="{Binding productQuantity}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+            
+        </Grid>
+        
+      
+
+            
+        
+
+    
+
+</ContentPage>
