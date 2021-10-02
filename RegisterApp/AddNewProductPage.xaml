@@ -8,6 +8,7 @@
         <ToolbarItem Text="Cancel" Clicked="Cancel"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
+
         <StackLayout Padding="20" Spacing="15">
             <StackLayout Orientation="Vertical">
                 <Label Text="Product Name" FontSize="14"/>
@@ -22,5 +23,6 @@
                 <Entry x:Name="EntryQuantity" Placeholder="Enter Product Quantity"/>
             </StackLayout>
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
