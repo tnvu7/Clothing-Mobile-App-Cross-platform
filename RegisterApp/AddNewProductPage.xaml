@@ -21,7 +21,6 @@
                 <Label Text="Product Quantity" FontSize="14"/>
                 <Entry x:Name="EntryQuantity" Placeholder="Enter Product Quantity"/>
             </StackLayout>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
