@@ -95,7 +95,6 @@ namespace RegisterApp
                 }
                 else
                 {
-
                     foreach (Product p in products)
                     {
                         if (p.productName == currentprd.productName)
