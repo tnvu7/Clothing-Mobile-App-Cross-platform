@@ -9,6 +9,7 @@ namespace RegisterApp
     {
         ObservableCollection<Product> m_products;
         List<Product> purchased_products = new List<Product>();
+
         public ManagerPanel(ObservableCollection<Product> products, List<Product> pro)
         {
             InitializeComponent();
