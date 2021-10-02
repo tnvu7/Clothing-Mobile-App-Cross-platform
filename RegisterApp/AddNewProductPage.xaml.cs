@@ -9,6 +9,7 @@ namespace RegisterApp
     {
         ObservableCollection<Product> m_products;
         Product currP = new Product();
+
         public AddNewProductPage(ObservableCollection<Product> pro)
         {
             InitializeComponent();
